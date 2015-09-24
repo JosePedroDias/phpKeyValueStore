@@ -74,6 +74,8 @@
 
         // filter timestamped copies
         $files = array_filter($files, is_valid_id);
+	//$files = (array) $files; // cast object to array
+	$files = array_values($files);
 
         echo json_encode($files);
     }
